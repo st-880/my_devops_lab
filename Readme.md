@@ -1,3 +1,3 @@
-# My devops Jorney
-Level 4: Learning git branhes
-level 5: Mastered Pull Requests
+# My devops Journey
+Level 4: Learning git branches
+Level 5: Mastered Pull Requests
