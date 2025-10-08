@@ -1,2 +1,3 @@
 FROM alpine
-CMD ["echo", "Level 7 Hunter Conquers Docker!"]
+COPY hunter.txt /hunter.txt
+CMD ["cat", "/hunter.txt"]
