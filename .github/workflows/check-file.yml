@@ -1,0 +1,11 @@
+name: Check File
+on:
+  push:
+    branches: [ master ]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check hunter.txt
+        run: cat hunter.txt
