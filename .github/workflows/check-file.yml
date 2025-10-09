@@ -10,4 +10,6 @@ jobs:
       - name: Check hunter.txt
         run: cat hunter.txt
       - name: Check Readme.md
-      - run: cat Readme.md
+        run: cat Readme.md
+      - name: Check Dockerfile
+        run: cat Dockerfile
