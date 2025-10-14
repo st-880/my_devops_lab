@@ -10,4 +10,10 @@ jobs:
       - name: Check hunter.txt
         run: cat hunter.txt
       - name: Check Readme.md
-      - run: cat Readme.md
+        run: cat Readme.md
+      - name: Check Dockerfile
+        run: cat Dockerfile
+      - name: Check for empty files
+        run: |
+          if [ ! -s hunter.txt ]; then echo "Error: hunter.txt is empty"; exit 1; fi
+          if [ ! -s Readme.md ]; then echo "Error: Readme.md is empty"; exit 1; fi
