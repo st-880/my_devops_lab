@@ -1,4 +1,4 @@
-name: Check Multiple Files
+name: Check Files and Docker
 on:
   push:
     branches: [ master ]
@@ -13,3 +13,11 @@ jobs:
         run: cat Readme.md
       - name: Check Dockerfile
         run: cat Dockerfile
+      - name: Check for empty files
+        run: |
+          if [ ! -s hunter.txt ]; then echo "Error: hunter.txt is empty"; exit 1; fi
+          if [ ! -s Readme.md ]; then echo "Error: Readme.md is empty"; exit 1; fi
+      - name: Build and run Docker
+        run: |
+          docker build -t hunter-level7-v5 .
+          docker run hunter-level7-v5
