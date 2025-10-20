@@ -1,0 +1,11 @@
+name: Test Workflow
+on:
+  push:
+    branches: [ master ]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Simple Test
+        run: echo "Hello, Shadow Monarch!"
