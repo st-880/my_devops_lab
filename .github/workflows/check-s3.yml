@@ -1,4 +1,4 @@
-name: Check and Upload to S3
+name: Check, Upload, and Download from S3
 on:
   push:
     branches: [ master ]
@@ -22,6 +22,8 @@ jobs:
         run: aws s3 cp test-file.txt s3://st-880-bucket/test-file.txt
       - name: List S3 Bucket Content
         run: aws s3 ls s3://st-880-bucket/ > s3-bucket-content.txt
+      - name: Download from S3
+        run: aws s3 cp s3://st-880-bucket/test-file.txt downloaded-test-file.txt
       - name: Archive S3 files
         uses: actions/upload-artifact@v4
         with:
@@ -29,3 +31,4 @@ jobs:
           path: |
             s3-buckets.txt
             s3-bucket-content.txt
+            downloaded-test-file.txt
