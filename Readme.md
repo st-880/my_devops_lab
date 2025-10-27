@@ -7,3 +7,4 @@ Test workflow run
 Test with new secrets
 Test with confirmed secrets
 Test with new keys
+Test with new keys V2
