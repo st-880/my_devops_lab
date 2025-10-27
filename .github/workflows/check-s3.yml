@@ -21,7 +21,7 @@ jobs:
       - name: Upload to S3
         run: aws s3 cp test-file.txt s3://st-880-bucket/test-file.txt
       - name: Log Step
-        run: echo "$(date): Completed stet" >> workflow.log
+        run: echo "$(date): Completed step" >> workflow.log
       - name: List S3 Bucket Content
         run: aws s3 ls s3://st-880-bucket/ > s3-bucket-content.txt
       - name: Download from S3
