@@ -6,3 +6,4 @@ Test push for workflow
 Test workflow run
 Test with new secrets
 Test with confirmed secrets
+Test with new keys
