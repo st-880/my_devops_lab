@@ -39,3 +39,4 @@ jobs:
             s3-bucket-content.txt
             s3-bucket-content-after.txt
             downloaded-test-file.txt
+            workflow.log
